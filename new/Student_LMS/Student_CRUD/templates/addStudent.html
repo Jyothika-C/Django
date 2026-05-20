@@ -1,0 +1,67 @@
+{% extends 'master.html' %}
+{% block title %}
+Add Student
+{% endblock title %}
+{% block content %}
+{% comment %} <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow p-4">
+                <h2 class="text-center mb-4">Add Student</h2>
+                <form method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Student Name</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            class="form-control"
+                            placeholder="Enter student name"
+                            required
+                        >
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            class="form-control"
+                            placeholder="Enter email"
+                            required
+                        >
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Course</label>
+                        <input 
+                            type="text" 
+                            name="course" 
+                            class="form-control"
+                            placeholder="Enter course"
+                            required
+                        >
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Enroll Date</label>
+                        <input 
+                            type="date" 
+                            name="enroll_date" 
+                            class="form-control"
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                        Add Student
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}
+<div class="container">
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock content %}
+

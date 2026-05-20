@@ -1,0 +1,34 @@
+{% extends "master.html" %}
+{% block title %} 
+Student List
+{% endblock title %} {% block content %}
+<h1 class="text-center mt-3 mb-3">Student List</h1>
+  <table class="table table-bordered  table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Course</th>
+      <th scope="col">Enroll_date</th>
+      <th scope="col" class="text-center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for student  in students  %}
+    <tr>
+      <th scope="row">{{student.id}}</th>
+      <td>{{student.student_name}}</td>
+      <td>{{student.email}}</td>
+      <td>{{student.course}}</td>
+      <td>{{student.enrollment_date}}</td>
+      <td>
+        <a class="btn btn-primary" role="button" href="{% url "details" student.id %}">View</a>
+        <a class="btn btn-success" role="button" href="{% url 'update' student.id %}">Update</a>
+        <a class="btn btn-danger" role="button" href="{% url "delete" student.id %}" >Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody> 
+</table>
+{% endblock content %}
