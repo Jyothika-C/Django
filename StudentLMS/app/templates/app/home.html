@@ -1,0 +1,204 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Admission System</title>
+
+    <!-- CSS LINK -->
+
+    <link rel="stylesheet" href="{% static 'app/style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="logo-left">
+
+            <img src="{% static 'app/college-logo.png' %}" alt="">
+
+        </div>
+
+        <div class="title">
+
+            <h1>
+                Mother Theresa Institute of Engineering and Technology
+            </h1>
+
+            <h2>
+                College Admission System
+            </h2>
+
+        </div>
+
+        <div class="logo-right">
+
+            <img src="{% static 'app/mother-logo.png' %}" alt="">
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <a href="{% url 'add_student' %}">
+            Add Student
+        </a>
+
+        <a href="{% url 'student_list' %}">
+            View Student
+        </a>
+
+        <a href="#">
+            Reports
+        </a>
+
+        <a href="#">
+            Update Student
+        </a>
+
+        <a href="#">
+            Delete Student
+        </a>
+
+        <a href="#">
+            Backup
+        </a>
+
+        <a href="#">
+            Restore
+        </a>
+
+        <a href="#">
+            Exit
+        </a>
+
+    </div>
+
+
+    <!-- FORM SECTION -->
+
+    <div class="form-container">
+
+        <div class="form-box">
+
+            <h2>Student Registration</h2>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="form-group">
+
+                    <label>Student Reg. No.</label>
+
+                    <input type="text" name="regno">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Name</label>
+
+                    <input type="text" name="name">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Program Level</label>
+
+                    <select name="program">
+
+                        <option>Select Level</option>
+                        <option>UG</option>
+                        <option>PG</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Branch</label>
+
+                    <select name="branch">
+
+                        <option>Select Branch</option>
+                        <option>CSE</option>
+                        <option>ECE</option>
+                        <option>EEE</option>
+                        <option>MECH</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Year</label>
+
+                    <select name="year">
+
+                        <option>Select Year</option>
+                        <option>1st Year</option>
+                        <option>2nd Year</option>
+                        <option>3rd Year</option>
+                        <option>4th Year</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Semester</label>
+
+                    <select name="semester">
+
+                        <option>Select Semester</option>
+                        <option>1 Semester</option>
+                        <option>2 Semester</option>
+
+                    </select>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button type="submit" class="save-btn">
+                        Save Student
+                    </button>
+
+                    <button type="reset" class="reset-btn">
+                        Reset
+                    </button>
+
+                    <button type="button" class="exit-btn">
+                        Exit
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
