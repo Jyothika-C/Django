@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Restore
+{% endblock %}
+
+{% block content %}
+
+<div class="form-container">
+
+    <div class="form-box">
+
+        <h2>Restore Backup</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <input type="file" name="backup_file">
+
+            <div class="buttons">
+
+                <button type="submit" class="save-btn">
+                    Restore
+                </button>
+
+            </div>
+
+        </form>
+
+        <br>
+
+        <h3>
+            {{ message }}
+        </h3>
+
+    </div>
+
+</div>
+
+{% endblock %}

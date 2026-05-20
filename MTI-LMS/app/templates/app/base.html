@@ -1,0 +1,60 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{% block title %} College Admission System {% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'app/style.css' %}" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <div class="header">
+      <div class="logo-left">
+        <img src="{% static 'app/college-logo.png' %}" alt="" />
+      </div>
+
+      <div class="title">
+        <h1>Mother Theresa Institute of Engineering and Technology</h1>
+
+        <h2>College Admission System</h2>
+      </div>
+
+      <div class="logo-right">
+        <img src="{% static 'app/mother-logo.png' %}" alt="" />
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+      <a href="{% url 'home' %}"> Home </a>
+
+      <a href="{% url 'add_student' %}"> Add Student </a>
+
+      <a href="{% url 'student_list' %}"> View Student </a>
+
+      <a href="{% url 'reports' %}"> Reports </a>
+
+      <a href="{% url 'student_list' %}"> Update Student </a>
+
+      <a href="{% url 'student_list' %}"> Delete Student </a>
+
+      <a href="{% url 'backup' %}"> Backup </a>
+
+      <a href="{% url 'restore' %}"> Restore </a>
+
+      <a href="{% url 'exit_page' %}"> Exit </a>
+    </div>
+
+    <!-- PAGE CONTENT -->
+
+    <div class="main-content">{% block content %} {% endblock %}</div>
+  </body>
+</html>

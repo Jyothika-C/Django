@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Update Student
+{% endblock %}
+
+{% block content %}
+
+<div class="form-container">
+
+    <div class="form-box">
+
+        <h2>Update Student</h2>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <div class="buttons">
+
+                <button type="submit" class="save-btn">
+                    Update Student
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Add Student
+{% endblock %}
+
+{% block content %}
+
+<div class="form-container">
+
+    <div class="form-box">
+
+        <h2>Student Registration</h2>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <div class="buttons">
+
+                <button type="submit" class="save-btn">
+                    Save Student
+                </button>
+
+                <button type="reset" class="reset-btn">
+                    Reset
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+}
+
+
+/* HEADER */
+
+.header{
+    background: linear-gradient(to bottom,#0059a6,#007be5);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+}
+
+.header img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    background: white;
+    border-radius: 5px;
+}
+
+.title{
+    text-align: center;
+}
+
+.title h1{
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.title h2{
+    margin-top: 15px;
+    font-size: 28px;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    background: #00a2ff;
+    padding: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover{
+    color: yellow;
+}
+
+
+/* MAIN CONTENT */
+
+.main-content{
+    padding: 40px;
+}
+
+
+/* FORM SECTION */
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.form-box{
+    width: 700px;
+    background: white;
+    padding: 40px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.form-box h2{
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+
+/* FORM */
+
+.form-group{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    width: 180px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input,
+.form-group select{
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    outline: none;
+    border: 1px solid #007bff;
+}
+
+
+/* BUTTONS */
+
+.buttons{
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.buttons button{
+    padding: 12px 22px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.save-btn{
+    background: #007bff;
+}
+
+.reset-btn{
+    background: #888;
+}
+
+.exit-btn{
+    background: #003366;
+}
+
+.buttons button:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+
+/* TABLE */
+
+.table-container{
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.table-container h1{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th{
+    background: #007bff;
+    color: white;
+
+    padding: 15px;
+    text-align: center;
+}
+
+table td{
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+table tr:hover{
+    background: #f1f1f1;
+}
+
+
+/* ACTION BUTTONS */
+
+.view-btn,
+.update-btn,
+.delete-btn{
+    padding: 7px 14px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 5px;
+
+    transition: 0.3s;
+}
+
+.view-btn{
+    background: #007bff;
+}
+
+.update-btn{
+    background: green;
+}
+
+.delete-btn{
+    background: red;
+}
+
+.view-btn:hover,
+.update-btn:hover,
+.delete-btn:hover{
+    opacity: 0.8;
+}
+
+
+/* COMMON PAGE BOX */
+
+.page-box{
+    width: 600px;
+    margin: 80px auto;
+
+    background: white;
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.page-box h1{
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.page-box p{
+    font-size: 18px;
+    color: #444;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 768px){
+
+    .header{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .title h1{
+        font-size: 28px;
+    }
+
+    .title h2{
+        font-size: 22px;
+    }
+
+    .navbar{
+        gap: 20px;
+    }
+
+    .form-box{
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form-group{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .buttons{
+        flex-direction: column;
+    }
+
+    .page-box{
+        width: 95%;
+    }
+
+    table{
+        font-size: 14px;
+    }
+
+}
