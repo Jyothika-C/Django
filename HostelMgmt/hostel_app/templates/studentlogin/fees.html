@@ -1,0 +1,201 @@
+{% extends 'studentlogin/student_base.html' %}
+
+{% block content %}
+
+<style>
+
+    .fee-card{
+        background:white;
+        padding:30px;
+        border-radius:20px;
+        box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .summary-card{
+        border-radius:15px;
+        padding:25px;
+        color:white;
+        box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+        transition:0.3s;
+    }
+
+    .summary-card:hover{
+        transform:scale(1.03);
+    }
+
+    .bg-total{
+        background:#2563eb;
+    }
+
+    .bg-paid{
+        background:#10b981;
+    }
+
+    .bg-balance{
+        background:#ef4444;
+    }
+
+    .table-card{
+        background:white;
+        padding:25px;
+        border-radius:20px;
+        margin-top:30px;
+        box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+</style>
+
+<!-- Heading -->
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+
+        <h2>
+
+            <i class="fa fa-money-bill-wave"></i>
+
+            Fee Details
+
+        </h2>
+
+        <p class="text-muted">
+
+            View your hostel fee payment details
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Summary Cards -->
+
+<div class="row g-4">
+
+    <div class="col-md-4">
+
+        <div class="summary-card bg-total">
+
+            <h3>₹{{ total_fee }}</h3>
+
+            <p>Total Fee</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="summary-card bg-paid">
+
+            <h3>₹{{ paid_fee }}</h3>
+
+            <p>Paid Fee</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="summary-card bg-balance">
+
+            <h3>₹{{ balance_fee }}</h3>
+
+            <p>Balance Fee</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Payment History -->
+
+<div class="table-card">
+
+    <h4 class="mb-4">
+
+        Payment History
+
+    </h4>
+
+    <table class="table table-bordered table-hover">
+
+        <thead class="table-dark">
+
+            <tr>
+
+                <th>Receipt No</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>R101</td>
+                <td>₹20,000</td>
+                <td>01-May-2026</td>
+
+                <td>
+
+                    <span class="badge bg-success">
+
+                        Paid
+
+                    </span>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>R102</td>
+                <td>₹15,000</td>
+                <td>10-May-2026</td>
+
+                <td>
+
+                    <span class="badge bg-success">
+
+                        Paid
+
+                    </span>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>R103</td>
+                <td>₹{{ balance_fee }}</td>
+                <td>Pending</td>
+
+                <td>
+
+                    <span class="badge bg-danger">
+
+                        Balance
+
+                    </span>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}

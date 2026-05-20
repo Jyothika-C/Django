@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Cards -->
+
+<div class="row g-4">
+
+    <div class="col-md-3">
+
+        <div class="card bg-primary text-white p-4 rounded">
+
+            <h2>120</h2>
+
+            <p>Total Students</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card bg-success text-white p-4 rounded">
+
+            <h2>45</h2>
+
+            <p>Total Rooms</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card bg-warning text-white p-4 rounded">
+
+            <h2>₹1,20,000</h2>
+
+            <p>Fees Collected</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card bg-danger text-white p-4 rounded">
+
+            <h2>8</h2>
+
+            <p>Complaints</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Student Table -->
+
+<div class="card mt-5 p-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+
+        <h3>Student List</h3>
+
+        <button class="btn btn-primary">
+
+            Add Student
+
+        </button>
+
+    </div>
+
+    <table class="table table-bordered table-hover">
+
+        <thead class="table-dark">
+
+            <tr>
+
+                <th>ID</th>
+                <th>Name</th>
+                <th>Room No</th>
+                <th>Department</th>
+                <th>Phone</th>
+                <th>Actions</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>1</td>
+                <td>Rahul</td>
+                <td>101</td>
+                <td>MCA</td>
+                <td>9876543210</td>
+
+                <td>
+
+                    <button class="btn btn-success btn-sm">
+
+                        Edit
+
+                    </button>
+
+                    <button class="btn btn-danger btn-sm">
+
+                        Delete
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>2</td>
+                <td>Anjali</td>
+                <td>102</td>
+                <td>BTech</td>
+                <td>9876501234</td>
+
+                <td>
+
+                    <button class="btn btn-success btn-sm">
+
+                        Edit
+
+                    </button>
+
+                    <button class="btn btn-danger btn-sm">
+
+                        Delete
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}

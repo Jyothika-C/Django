@@ -1,0 +1,163 @@
+{% extends 'studentlogin/student_base.html' %}
+
+{% block content %}
+
+<style>
+
+    .room-card{
+        background:white;
+        padding:30px;
+        border-radius:20px;
+        box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .room-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:30px;
+    }
+
+    .info-box{
+        background:#f8fafc;
+        padding:20px;
+        border-radius:15px;
+        margin-bottom:20px;
+    }
+
+    .info-box h5{
+        color:#64748b;
+        margin-bottom:10px;
+    }
+
+    .info-box p{
+        font-size:20px;
+        font-weight:600;
+        margin:0;
+    }
+
+    .roommates-table{
+        margin-top:30px;
+    }
+
+</style>
+
+<div class="room-card">
+
+    <!-- Header -->
+
+    <div class="room-header">
+
+        <div>
+
+            <h2>
+
+                <i class="fa fa-bed"></i>
+
+                Room Details
+
+            </h2>
+
+            <p class="text-muted">
+
+                View allocated room information
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Room Information -->
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="info-box">
+
+                <h5>Room Number</h5>
+
+                <p>101</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="info-box">
+
+                <h5>Total Roommates</h5>
+
+                <p>3</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Roommates Table -->
+
+    <div class="roommates-table">
+
+        <h4 class="mb-3">
+
+            Roommate Names
+
+        </h4>
+
+        <table class="table table-bordered table-hover">
+
+            <thead class="table-dark">
+
+                <tr>
+
+                    <th>S.No</th>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Contact</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>1</td>
+                    <td>Rahul Kumar</td>
+                    <td>MCA</td>
+                    <td>9876543210</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+                    <td>Anjali</td>
+                    <td>BTech</td>
+                    <td>9876501234</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>3</td>
+                    <td>Priya</td>
+                    <td>BSc</td>
+                    <td>9123456780</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

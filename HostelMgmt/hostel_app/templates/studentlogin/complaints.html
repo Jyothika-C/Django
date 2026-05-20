@@ -1,0 +1,148 @@
+{% extends 'studentlogin/student_base.html' %}
+
+{% block content %}
+
+<style>
+
+    .container-box{
+        background:white;
+        padding:30px;
+        border-radius:20px;
+        box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+        max-width:900px;
+        margin:auto;
+    }
+
+    h2{
+        margin-bottom:20px;
+    }
+
+    .form-box{
+        background:#f8fafc;
+        padding:20px;
+        border-radius:12px;
+        margin-bottom:30px;
+    }
+
+    input, textarea{
+        width:100%;
+        padding:10px;
+        margin-top:8px;
+        margin-bottom:15px;
+        border:1px solid #cbd5e1;
+        border-radius:8px;
+    }
+
+    .btn{
+        background:#2563eb;
+        color:white;
+        border:none;
+        padding:10px 16px;
+        border-radius:8px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    .btn:hover{
+        background:#1e40af;
+        transform:scale(1.05);
+    }
+
+    table{
+        width:100%;
+        margin-top:20px;
+        border-collapse:collapse;
+    }
+
+    th{
+        background:#1e293b;
+        color:white;
+        padding:10px;
+    }
+
+    td{
+        padding:10px;
+        border-bottom:1px solid #e2e8f0;
+        text-align:center;
+    }
+
+    .pending{
+        color:orange;
+        font-weight:bold;
+    }
+
+    .solved{
+        color:green;
+        font-weight:bold;
+    }
+
+    .withdraw-btn{
+        background:#ef4444;
+        color:white;
+        border:none;
+        padding:6px 10px;
+        border-radius:6px;
+        cursor:pointer;
+    }
+
+    .withdraw-btn:hover{
+        background:#b91c1c;
+    }
+
+</style>
+
+<div class="container-box">
+
+    <h2>Complaints</h2>
+
+    <!-- Raise Complaint Form -->
+
+    <div class="form-box">
+
+        <h3>Raise Complaint</h3>
+
+        <label>Issue Title</label>
+        <input type="text" placeholder="Enter issue title">
+
+        <label>Description</label>
+        <textarea rows="4" placeholder="Describe your issue"></textarea>
+
+        <button class="btn">Submit Complaint</button>
+
+    </div>
+
+    <!-- Complaint List -->
+
+    <h3>My Complaints</h3>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Issue</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Fan not working</td>
+            <td>10-May-2026</td>
+            <td class="pending">Pending</td>
+            <td><button class="withdraw-btn">Withdraw</button></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Water leakage</td>
+            <td>09-May-2026</td>
+            <td class="solved">Solved</td>
+            <td><button class="withdraw-btn">View</button></td>
+        </tr>
+
+    </table>
+
+</div>
+
+{% endblock %}
